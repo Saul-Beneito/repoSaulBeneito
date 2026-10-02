@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="720" viewBox="0 0 1250 720">
+  <rect width="1250" height="720" fill="#f3eee5"/>
+  <style>
+    .text{font-family:Arial,sans-serif;fill:#263238}.small{font-family:Arial,sans-serif;font-size:14px;fill:#667176}.title{font-family:Arial,sans-serif;font-size:25px;font-weight:bold;fill:#263238}.box{fill:#fffdf8;stroke:#263238;stroke-width:2}.button{fill:#263238}.buttonText{font-family:Arial,sans-serif;font-size:14px;font-weight:bold;fill:#fffdf8}.orange{fill:#d97745}.white{fill:#fffdf8}.line{stroke:#263238;stroke-width:2;fill:none}
++  </style>
++
++  <text x="45" y="48" class="title">Boceto sencillo: aplicación de papelería</text>
++  <text x="45" y="75" class="small">Una única papelería · vista de cliente y vista del administrador</text>
++
++  <!-- Vista cliente -->
++  <rect x="45" y="105" width="650" height="535" rx="8" class="box"/>
++  <rect x="45" y="105" width="650" height="68" rx="8" fill="#e4dbcd"/>
++  <text x="70" y="146" class="title" font-size="21">Papelería La Esquina</text>
++  <rect x="527" y="122" width="145" height="34" rx="5" class="orange"/><text x="538" y="144" class="buttonText">Realizar pedido</text>
++
++  <rect x="70" y="215" width="285" height="125" rx="6" class="box"/><text x="90" y="250" class="text" font-size="17">Fotocopias</text><text x="90" y="277" class="small">Varios tipos</text><rect x="88" y="295" width="145" height="30" rx="5" class="orange"/><text x="103" y="316" class="buttonText">Solicitar copias</text>
++  <a href="boceto-libros.svg"><rect x="375" y="215" width="290" height="125" rx="6" class="box"/><text x="395" y="250" class="text" font-size="17">Libro</text><text x="395" y="277" class="small">Bajo pedido</text><rect x="393" y="295" width="155" height="30" rx="5" class="orange"/><text x="408" y="316" class="buttonText">Encargar libro</text></a>
++
++  <rect x="70" y="385" width="595" height="105" rx="6" fill="#e4dbcd" stroke="#263238"/>
++  <text x="92" y="420" class="text" font-size="18">Pedido preparado</text>
++  <text x="92" y="446" class="small">Aviso cuando el pedido o libro esté disponible.</text>
++  <rect x="92" y="460" width="155" height="30" rx="5" class="button"/><text x="112" y="481" class="buttonText">Ver mis pedidos</text>
++
++  <!-- Vista administrador -->
++  <rect x="735" y="105" width="470" height="535" rx="8" class="box"/>
++  <rect x="735" y="105" width="470" height="68" rx="8" fill="#263238"/>
++  <text x="765" y="146" fill="#fffdf8" font-family="Arial" font-size="22" font-weight="bold">Panel administrador</text>
++  <text x="765" y="211" class="title" font-size="21">Cuentas por mes</text>
++  <rect x="765" y="230" width="180" height="38" rx="5" class="white" stroke="#9da6a3"/><text x="785" y="255" class="text">Septiembre 2026</text>
++  <rect x="960" y="230" width="190" height="38" rx="5" class="button"/><text x="985" y="255" class="buttonText">Cambiar mes</text>
++
++  <rect x="765" y="300" width="195" height="90" rx="6" fill="#e4dbcd"/><text x="785" y="330" class="small">Ventas del mes</text><text x="785" y="370" class="title" font-size="25">2.450 €</text>
++  <rect x="980" y="300" width="170" height="90" rx="6" fill="#e4dbcd"/><text x="1000" y="330" class="small">Pedidos</text><text x="1000" y="370" class="title" font-size="25">38</text>
++
++  <text x="765" y="430" class="text" font-size="18">Resumen mensual</text>
++  <line x1="765" y1="448" x2="1150" y2="448" class="line"/>
++  <text x="765" y="478" class="small">Ingresos</text><text x="1045" y="478" class="text">2.450 €</text>
++  <text x="765" y="508" class="small">Gastos</text><text x="1045" y="508" class="text">980 €</text>
++  <text x="765" y="538" class="small">Beneficio</text><text x="1045" y="538" class="text">1.470 €</text>
++  <rect x="765" y="565" width="190" height="36" rx="5" class="button"/><text x="787" y="588" class="buttonText">Ver cuentas</text>
++  <rect x="970" y="565" width="180" height="36" rx="5" class="orange"/><text x="988" y="588" class="buttonText">Exportar informe</text>
++
++  <text x="45" y="685" class="small">Los pedidos, inventario, ventas y cuentas se gestionan desde el panel del administrador.</text>
++</svg>

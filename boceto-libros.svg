@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="720" viewBox="0 0 900 720">
+  <rect width="900" height="720" fill="#f3eee5"/>
+  <style>
+    .text{font-family:Arial,sans-serif;fill:#263238}.small{font-family:Arial,sans-serif;font-size:14px;fill:#667176}.title{font-family:Arial,sans-serif;font-size:25px;font-weight:bold;fill:#263238}.box{fill:#fffdf8;stroke:#263238;stroke-width:2}.button{fill:#263238}.buttonText{font-family:Arial,sans-serif;font-size:14px;font-weight:bold;fill:#fffdf8}.orange{fill:#d97745}.soft{fill:#e4dbcd}
+  </style>
+
+  <text x="45" y="48" class="title">Pedir libros</text>
+  <text x="45" y="75" class="small">Solicita un libro y te avisaremos cuando esté disponible</text>
+
+  <rect x="45" y="105" width="810" height="570" rx="8" class="box"/>
+  <rect x="45" y="105" width="810" height="68" rx="8" fill="#263238"/>
+  <text x="72" y="146" fill="#fffdf8" font-family="Arial" font-size="22" font-weight="bold">Papelería La Esquina</text>
+
+  <text x="72" y="220" class="title" font-size="20">Buscar libros disponibles</text>
+  <rect x="72" y="240" width="590" height="40" rx="5" class="box"/>
+  <text x="90" y="266" class="small">Buscar por título, autor o ISBN...</text>
+  <rect x="680" y="240" width="120" height="40" rx="5" class="button"/>
+  <text x="710" y="266" class="buttonText">Buscar</text>
+
+  <rect x="72" y="300" width="350" height="78" rx="6" class="soft"/>
+  <text x="92" y="327" class="text" font-size="16">El principito</text>
+  <text x="92" y="351" class="small">Antoine de Saint-Exupéry · Disponible</text>
+  <rect x="310" y="337" width="90" height="28" rx="5" class="orange"/><text x="328" y="357" class="buttonText">Elegir</text>
+  <rect x="450" y="300" width="350" height="78" rx="6" class="soft"/>
+  <text x="470" y="327" class="text" font-size="16">Cien años de soledad</text>
+  <text x="470" y="351" class="small">Gabriel García Márquez · Disponible</text>
+  <rect x="688" y="337" width="90" height="28" rx="5" class="orange"/><text x="706" y="357" class="buttonText">Elegir</text>
+
+  <text x="72" y="420" class="title" font-size="20">Datos del libro</text>
+  <text x="72" y="450" class="text" font-size="15">Título seleccionado</text>
+  <rect x="72" y="462" width="350" height="40" rx="5" class="box"/>
+  <text x="90" y="488" class="small">Elige un resultado o escribe un título</text>
+  <text x="450" y="450" class="text" font-size="15">Autor</text>
+  <rect x="450" y="462" width="350" height="40" rx="5" class="box"/>
+  <text x="468" y="488" class="small">Nombre del autor</text>
+
+  <rect x="72" y="530" width="728" height="60" rx="6" class="soft"/>
+  <text x="92" y="557" class="text" font-size="17">Pedido bajo demanda</text>
+  <text x="92" y="579" class="small">Te avisaremos cuando podamos conseguir el libro.</text>
+
+  <rect x="72" y="615" width="170" height="38" rx="5" class="button"/>
+  <text x="111" y="640" class="buttonText">Volver atrás</text>
+  <rect x="630" y="615" width="170" height="38" rx="5" class="orange"/>
+  <text x="666" y="640" class="buttonText">Pedir libro</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650">
+  <rect width="900" height="650" fill="#f3eee5"/>
+  <style>
+    .text{font-family:Arial,sans-serif;fill:#263238}.small{font-family:Arial,sans-serif;font-size:14px;fill:#667176}.title{font-family:Arial,sans-serif;font-size:25px;font-weight:bold;fill:#263238}.box{fill:#fffdf8;stroke:#263238;stroke-width:2}.button{fill:#263238}.buttonText{font-family:Arial,sans-serif;font-size:14px;font-weight:bold;fill:#fffdf8}.orange{fill:#d97745}.line{stroke:#9da6a3;stroke-width:1}.selected{fill:#fff3eb;stroke:#d97745;stroke-width:2}.mobile{display:none}@media (max-width:600px){.desktop{display:none}.mobile{display:block}}
+  </style>
+
+  <g class="desktop">
+  <text x="45" y="48" class="title">Solicitar fotocopias</text>
+  <text x="45" y="75" class="small">Elige el tipo de copia y adjunta el archivo que quieres imprimir</text>
+
+  <rect x="45" y="105" width="810" height="500" rx="8" class="box"/>
+  <rect x="45" y="105" width="810" height="68" rx="8" fill="#263238"/>
+  <text x="72" y="146" fill="#fffdf8" font-family="Arial" font-size="22" font-weight="bold">Papelería La Esquina</text>
+  <text x="72" y="220" class="title" font-size="20">Tipo de fotocopia</text>
+
+  <rect x="72" y="245" width="230" height="100" rx="6" class="selected"/>
+  <circle cx="97" cy="275" r="9" fill="#d97745"/><circle cx="97" cy="275" r="4" fill="#fffdf8"/>
+  <text x="118" y="280" class="text" font-size="17">Blanco y negro</text>
+  <text x="92" y="315" class="small">Desde 0,05 € por página</text>
+
+  <rect x="320" y="245" width="230" height="100" rx="6" class="box"/>
+  <circle cx="345" cy="275" r="9" fill="#fffdf8" stroke="#9da6a3" stroke-width="2"/>
+  <text x="366" y="280" class="text" font-size="17">Color</text>
+  <text x="340" y="315" class="small">Desde 0,20 € por página</text>
+
+  <rect x="568" y="245" width="230" height="100" rx="6" class="box"/>
+  <circle cx="593" cy="275" r="9" fill="#fffdf8" stroke="#9da6a3" stroke-width="2"/>
+  <text x="614" y="280" class="text" font-size="17">Doble cara</text>
+  <text x="588" y="315" class="small">Ahorra papel y espacio</text>
+
+  <text x="72" y="390" class="text" font-size="18">Archivo para fotocopiar</text>
+  <rect x="72" y="410" width="726" height="90" rx="6" fill="#e4dbcd" stroke="#9da6a3" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="435" y="447" text-anchor="middle" class="text" font-size="17">Arrastra aquí tu archivo</text>
+  <text x="435" y="474" text-anchor="middle" class="small">o pulsa “Seleccionar archivo” · PDF, DOCX, JPG o PNG</text>
+
+  <rect x="72" y="530" width="170" height="38" rx="5" class="button"/>
+  <text x="102" y="555" class="buttonText">Seleccionar archivo</text>
+  <rect x="628" y="530" width="170" height="38" rx="5" class="orange"/>
+  <text x="666" y="555" class="buttonText">Enviar solicitud</text>
+  </g>
+
+  <g class="mobile">
+    <rect x="12" y="12" width="366" height="820" rx="18" class="box"/>
+    <rect x="12" y="12" width="366" height="86" rx="18" fill="#263238"/>
+    <text x="32" y="50" fill="#fffdf8" font-family="Arial" font-size="20" font-weight="bold">Papelería La Esquina</text>
+    <text x="32" y="75" fill="#d7ddda" font-family="Arial" font-size="13">Solicitar fotocopias</text>
+    <text x="32" y="135" class="title" font-size="22">Tipo de copia</text>
+    <rect x="32" y="155" width="326" height="75" rx="6" class="selected"/>
+    <circle cx="55" cy="190" r="9" fill="#d97745"/><circle cx="55" cy="190" r="4" fill="#fffdf8"/>
+    <text x="78" y="195" class="text" font-size="16">Blanco y negro</text><text x="78" y="216" class="small">Desde 0,05 € por página</text>
+    <rect x="32" y="242" width="326" height="75" rx="6" class="box"/>
+    <circle cx="55" cy="277" r="9" fill="#fffdf8" stroke="#9da6a3" stroke-width="2"/>
+    <text x="78" y="282" class="text" font-size="16">Color</text><text x="78" y="303" class="small">Desde 0,20 € por página</text>
+    <rect x="32" y="329" width="326" height="75" rx="6" class="box"/>
+    <circle cx="55" cy="364" r="9" fill="#fffdf8" stroke="#9da6a3" stroke-width="2"/>
+    <text x="78" y="369" class="text" font-size="16">Doble cara</text><text x="78" y="390" class="small">Ahorra papel y espacio</text>
+    <text x="32" y="450" class="text" font-size="18">Archivo para fotocopiar</text>
+    <rect x="32" y="468" width="326" height="110" rx="6" fill="#e4dbcd" stroke="#9da6a3" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="195" y="510" text-anchor="middle" class="text" font-size="15">Añade tu archivo aquí</text><text x="195" y="536" text-anchor="middle" class="small">PDF, DOCX, JPG o PNG</text>
+    <rect x="32" y="610" width="326" height="42" rx="5" class="button"/><text x="105" y="636" class="buttonText">Seleccionar archivo</text>
+    <rect x="32" y="670" width="326" height="42" rx="5" class="orange"/><text x="115" y="696" class="buttonText">Enviar solicitud</text>
+    <text x="195" y="775" text-anchor="middle" class="small">Diseño adaptado a móvil</text>
+  </g>
+</svg>
