@@ -14,9 +14,17 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="estilo.css" />
+
+    <!-- Scripts clásicos para que Three.js también funcione al abrir el HTML con doble clic. -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.146.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.146.0/examples/js/loaders/GLTFLoader.js"></script>
   </head>
 
   <body>
+    <div class="scroll-progress" aria-hidden="true">
+      <span id="scroll-progress-bar"></span>
+    </div>
+
     <!-- NAVBAR -->
     <header>
       <nav class="navbar">
@@ -37,8 +45,17 @@
     <main>
       <!-- INICIO -->
       <section id="inicio" class="hero">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
         <div class="container hero-content">
           <div class="hero-text">
+            <div class="space-status">
+              <span class="status-dot"></span>
+              <span>TRANSMISIÓN ACTIVA</span>
+              <span class="status-line"></span>
+              <span>SECTOR DAW-21</span>
+            </div>
+
             <p class="small-text">Hola, soy</p>
 
             <h1>Saul</h1>
@@ -58,6 +75,12 @@
 
               <a href="#contacto" class="btn btn-secondary"> Contactar </a>
             </div>
+
+            <div class="hero-coordinates">
+              <span>39.4699° N</span>
+              <span>0.3763° W</span>
+              <span>EXPLORANDO / 2026</span>
+            </div>
           </div>
         </div>
       </section>
@@ -65,13 +88,14 @@
       <!-- SOBRE MÍ -->
       <section id="sobre-mi" class="section">
         <div class="container">
-          <div class="section-title">
+          <div class="section-title reveal">
             <p>Conóceme</p>
             <h2>Sobre mí</h2>
+            <span class="title-line"></span>
           </div>
 
           <div class="about-content">
-            <div class="about-text">
+            <div class="about-text reveal">
               <p>
                 Soy Saul, tengo 21 años y actualmente estoy estudiando un Grado
                 Superior de Desarrollo de Aplicaciones Web (DAW).
@@ -90,8 +114,8 @@
               </p>
             </div>
 
-            <div class="about-info">
-              <div class="info-card">
+            <div class="about-info reveal">
+              <div class="info-card tilt-card">
                 <span>🎂</span>
                 <div>
                   <strong>Edad</strong>
@@ -99,7 +123,7 @@
                 </div>
               </div>
 
-              <div class="info-card">
+              <div class="info-card tilt-card">
                 <span>💻</span>
                 <div>
                   <strong>Estudios actuales</strong>
@@ -107,7 +131,7 @@
                 </div>
               </div>
 
-              <div class="info-card">
+              <div class="info-card tilt-card">
                 <span>🌐</span>
                 <div>
                   <strong>Área</strong>
@@ -122,13 +146,14 @@
       <!-- FORMACIÓN -->
       <section id="formacion" class="section section-dark">
         <div class="container">
-          <div class="section-title">
+          <div class="section-title reveal">
             <p>Mi trayectoria</p>
             <h2>Formación</h2>
+            <span class="title-line"></span>
           </div>
 
           <div class="timeline">
-            <div class="timeline-item">
+            <div class="timeline-item reveal">
               <div class="timeline-number">01</div>
 
               <div class="timeline-content">
@@ -138,7 +163,7 @@
               </div>
             </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item reveal">
               <div class="timeline-number">02</div>
 
               <div class="timeline-content">
@@ -151,7 +176,7 @@
               </div>
             </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item reveal">
               <div class="timeline-number">03</div>
 
               <div class="timeline-content">
@@ -170,49 +195,68 @@
       <!-- HABILIDADES -->
       <section id="habilidades" class="section">
         <div class="container">
-          <div class="section-title">
+          <div class="section-title reveal">
             <p>Lo que estoy aprendiendo</p>
             <h2>Habilidades</h2>
+            <span class="title-line"></span>
           </div>
 
           <div class="skills-grid">
-            <div class="skill-card">
+            <div class="skill-card tilt-card reveal">
               <div class="skill-icon">HTML</div>
               <h3>HTML5</h3>
               <p>Creación y estructuración de páginas web.</p>
+              <div class="skill-meter">
+                <span class="skill-level-90"></span>
+              </div>
             </div>
 
-            <div class="skill-card">
+            <div class="skill-card tilt-card reveal">
               <div class="skill-icon">CSS</div>
               <h3>CSS3</h3>
               <p>Diseño, responsive design y estilos web.</p>
+              <div class="skill-meter">
+                <span class="skill-level-85"></span>
+              </div>
             </div>
 
-            <div class="skill-card">
+            <div class="skill-card tilt-card reveal">
               <div class="skill-icon">JS</div>
               <h3>JavaScript</h3>
               <p>
                 Programación y desarrollo de funcionalidades para aplicaciones
                 web.
               </p>
+              <div class="skill-meter">
+                <span class="skill-level-70"></span>
+              </div>
             </div>
 
-            <div class="skill-card">
+            <div class="skill-card tilt-card reveal">
               <div class="skill-icon">SQL</div>
               <h3>Bases de datos</h3>
               <p>Aprendiendo a trabajar con bases de datos y consultas SQL.</p>
+              <div class="skill-meter">
+                <span class="skill-level-65"></span>
+              </div>
             </div>
 
-            <div class="skill-card">
+            <div class="skill-card tilt-card reveal">
               <div class="skill-icon">Git</div>
               <h3>Git</h3>
               <p>Control de versiones y gestión de proyectos.</p>
+              <div class="skill-meter">
+                <span class="skill-level-75"></span>
+              </div>
             </div>
 
-            <div class="skill-card">
+            <div class="skill-card tilt-card reveal">
               <div class="skill-icon">SMX</div>
               <h3>Sistemas</h3>
               <p>Conocimientos de hardware, redes y sistemas informáticos.</p>
+              <div class="skill-meter">
+                <span class="skill-level-80"></span>
+              </div>
             </div>
           </div>
         </div>
@@ -221,13 +265,14 @@
       <!-- PROYECTOS -->
       <section id="proyectos" class="section section-dark">
         <div class="container">
-          <div class="section-title">
+          <div class="section-title reveal">
             <p>Lo que hago</p>
             <h2>Mis proyectos</h2>
+            <span class="title-line"></span>
           </div>
 
           <div class="projects-grid">
-            <article class="project-card">
+            <article class="project-card tilt-card reveal">
               <div class="project-image">&lt;/&gt;</div>
 
               <div class="project-content">
@@ -246,7 +291,7 @@
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card tilt-card reveal">
               <div class="project-image">&lt;WEB&gt;</div>
 
               <div class="project-content">
@@ -265,7 +310,7 @@
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card tilt-card reveal">
               <div class="project-image">{ }</div>
 
               <div class="project-content">
@@ -290,12 +335,13 @@
       <!-- CONTACTO -->
       <section id="contacto" class="section contact">
         <div class="container">
-          <div class="section-title">
+          <div class="section-title reveal">
             <p>¿Hablamos?</p>
             <h2>Contacto</h2>
+            <span class="title-line"></span>
           </div>
 
-          <div class="contact-content">
+          <div class="contact-content reveal">
             <p>
               Si quieres contactar conmigo o conocer más sobre mis proyectos,
               puedes encontrarme aquí:
@@ -306,9 +352,14 @@
 
               <a href="mailto:tuemail@gmail.com"> 📧 Email </a>
 
-              <a href="https://github.com/" target="_blank"> 💻 GitHub </a>
+              <a href="https://github.com/Saul-Beneito" target="_blank">
+                💻 GitHub
+              </a>
 
-              <a href="https://www.linkedin.com/" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/saul-undefined-186855440/?isSelfProfile=true"
+                target="_blank"
+              >
                 💼 LinkedIn
               </a>
             </div>
@@ -322,8 +373,252 @@
       <div class="container">
         <p>© 2026 Saul. Portfolio personal.</p>
 
-        <p>Desarrollado con HTML y CSS.</p>
+        <p>Desarrollado con HTML, CSS y Three.js.</p>
       </div>
     </footer>
+
+    <script>
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      );
+      const progressBar = document.querySelector("#scroll-progress-bar");
+      const revealElements = document.querySelectorAll(".reveal");
+      const navLinks = document.querySelectorAll(".nav-links a");
+      const sections = document.querySelectorAll("main section[id]");
+
+      const updateScrollProgress = () => {
+        const scrollableHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const progress =
+          scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
+        progressBar.style.transform = `scaleX(${progress})`;
+      };
+
+      window.addEventListener("scroll", updateScrollProgress, {
+        passive: true,
+      });
+      updateScrollProgress();
+
+      if (!prefersReducedMotion.matches) {
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+
+        revealElements.forEach((element) => revealObserver.observe(element));
+
+        const sectionObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                navLinks.forEach((link) => {
+                  link.classList.toggle(
+                    "is-active",
+                    link.getAttribute("href") === `#${entry.target.id}`,
+                  );
+                });
+              }
+            });
+          },
+          { rootMargin: "-35% 0px -55% 0px" },
+        );
+
+        sections.forEach((section) => sectionObserver.observe(section));
+      } else {
+        revealElements.forEach((element) =>
+          element.classList.add("is-visible"),
+        );
+      }
+
+      if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        document.querySelectorAll(".tilt-card").forEach((card) => {
+          card.addEventListener("pointermove", (event) => {
+            const bounds = card.getBoundingClientRect();
+            const rotateX =
+              ((event.clientY - bounds.top) / bounds.height - 0.5) * -7;
+            const rotateY =
+              ((event.clientX - bounds.left) / bounds.width - 0.5) * 7;
+            card.style.setProperty("--rotate-x", `${rotateX}deg`);
+            card.style.setProperty("--rotate-y", `${rotateY}deg`);
+          });
+          card.addEventListener("pointerleave", () => {
+            card.style.setProperty("--rotate-x", "0deg");
+            card.style.setProperty("--rotate-y", "0deg");
+          });
+        });
+      }
+
+      const canvas = document.querySelector("#hero-canvas");
+      const hero = document.querySelector("#inicio");
+
+      if (canvas && hero && !prefersReducedMotion.matches) {
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+        const renderer = new THREE.WebGLRenderer({
+          canvas,
+          alpha: true,
+          antialias: true,
+          powerPreference: "high-performance",
+        });
+
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        camera.position.z = 5.5;
+
+        const group = new THREE.Group();
+        const planetGroup = new THREE.Group();
+        const planets = [
+          { position: [-1.6, -1.15, -0.9], radius: 0.38, color: 0x2563eb },
+          { position: [0, -1.35, -0.7], radius: 0.5, color: 0x7c3aed },
+          { position: [1.7, -1.05, -0.8], radius: 0.34, color: 0x0891b2 },
+        ];
+
+        planets.forEach(({ position, radius, color }, index) => {
+          const planet = new THREE.Mesh(
+            new THREE.SphereGeometry(radius, 24, 16),
+            new THREE.MeshStandardMaterial({
+              color,
+              roughness: 0.72,
+              metalness: 0.12,
+              emissive: color,
+              emissiveIntensity: 0.08,
+            }),
+          );
+          planet.position.set(...position);
+          planet.rotation.z = index * 0.35;
+          planetGroup.add(planet);
+        });
+
+        group.add(planetGroup);
+
+        const modelGroup = new THREE.Group();
+        modelGroup.position.set(1.35, -0.65, -0.35);
+        modelGroup.scale.setScalar(0.5);
+        group.add(modelGroup);
+
+        const ambientLight = new THREE.HemisphereLight(0x9ddcff, 0x111827, 2.4);
+        scene.add(ambientLight);
+
+        const keyLight = new THREE.DirectionalLight(0x38bdf8, 4);
+        keyLight.position.set(3, 4, 5);
+        scene.add(keyLight);
+
+        const rimLight = new THREE.DirectionalLight(0x8b5cf6, 3);
+        rimLight.position.set(-4, 1, -3);
+        scene.add(rimLight);
+
+        let modelMixer;
+        const modelLoader = new THREE.GLTFLoader();
+        modelLoader.load(
+          "https://threejs.org/examples/models/gltf/RobotExpressive/RobotExpressive.glb",
+          (gltf) => {
+            const model = gltf.scene;
+            const modelBounds = new THREE.Box3().setFromObject(model);
+            const modelCenter = modelBounds.getCenter(new THREE.Vector3());
+            const modelSize = modelBounds.getSize(new THREE.Vector3());
+            const modelHeight = Math.max(modelSize.y, 0.001);
+
+            model.position.sub(modelCenter);
+            model.position.y += modelHeight / 2;
+            model.scale.setScalar(2.1 / modelHeight);
+            model.rotation.y = -0.3;
+            modelGroup.add(model);
+
+            if (gltf.animations.length > 0) {
+              modelMixer = new THREE.AnimationMixer(model);
+              modelMixer.clipAction(gltf.animations[0]).play();
+            }
+          },
+          undefined,
+          (error) => {
+            console.error(
+              "No se pudo cargar el modelo 3D de la portada.",
+              error,
+            );
+          },
+        );
+
+        const particleGeometry = new THREE.BufferGeometry();
+        const particleCount = 700;
+        const particlePositions = new Float32Array(particleCount * 3);
+
+        for (let index = 0; index < particleCount * 3; index += 3) {
+          const radius = 2.2 + Math.random() * 1.5;
+          const theta = Math.random() * Math.PI * 2;
+          const phi = Math.acos(2 * Math.random() - 1);
+
+          particlePositions[index] = radius * Math.sin(phi) * Math.cos(theta);
+          particlePositions[index + 1] = radius * Math.cos(phi);
+          particlePositions[index + 2] =
+            radius * Math.sin(phi) * Math.sin(theta);
+        }
+
+        particleGeometry.setAttribute(
+          "position",
+          new THREE.BufferAttribute(particlePositions, 3),
+        );
+
+        const particleMaterial = new THREE.PointsMaterial({
+          color: 0x7dd3fc,
+          size: 0.018,
+          transparent: true,
+          opacity: 0.8,
+          sizeAttenuation: true,
+        });
+        const particles = new THREE.Points(particleGeometry, particleMaterial);
+        group.add(particles);
+        scene.add(group);
+
+        const pointer = { x: 0, y: 0 };
+        const updateSize = () => {
+          const { width, height } = hero.getBoundingClientRect();
+          renderer.setSize(width, height, false);
+          camera.aspect = width / height;
+          camera.updateProjectionMatrix();
+        };
+
+        const updatePointer = (event) => {
+          pointer.x = (event.clientX / window.innerWidth - 0.5) * 2;
+          pointer.y = (event.clientY / window.innerHeight - 0.5) * 2;
+        };
+
+        const clock = new THREE.Clock();
+        const animate = () => {
+          const delta = clock.getDelta();
+          const elapsed = clock.elapsedTime;
+          particles.rotation.y = elapsed * 0.025;
+          particles.rotation.x = elapsed * 0.01;
+          const jumpProgress = (elapsed * 0.22) % 2;
+          const jumpPhase = jumpProgress > 1 ? 2 - jumpProgress : jumpProgress;
+          modelGroup.position.x = 1.35 - jumpPhase * 3.05 + pointer.x * 0.08;
+          modelGroup.position.y =
+            -0.68 + Math.sin(jumpPhase * Math.PI) * 0.72 - pointer.y * 0.05;
+          modelGroup.rotation.y = elapsed * 0.12 + pointer.x * 0.16;
+          if (modelMixer) {
+            modelMixer.update(delta);
+          }
+          if (modelGroup.children[0]?.userData.animateHead) {
+            modelGroup.children[0].userData.animateHead(elapsed);
+          }
+          group.position.x += (pointer.x * 0.28 - group.position.x) * 0.025;
+          group.position.y += (-pointer.y * 0.18 - group.position.y) * 0.025;
+          renderer.render(scene, camera);
+          requestAnimationFrame(animate);
+        };
+
+        window.addEventListener("resize", updateSize);
+        window.addEventListener("pointermove", updatePointer, {
+          passive: true,
+        });
+        updateSize();
+        animate();
+      }
+    </script>
   </body>
 </html>
